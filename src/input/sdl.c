@@ -195,10 +195,10 @@ int sdlinput_handle_event(SDL_Event* event) {
       gamepad->rightStickY = -event->caxis.value - 1;
       break;
     case SDL_CONTROLLER_AXIS_TRIGGERLEFT:
-      gamepad->leftTrigger = (event->caxis.value >> 8) + 127;
+      gamepad->leftTrigger = (event->caxis.value >> 8) + 255;
       break;
     case SDL_CONTROLLER_AXIS_TRIGGERRIGHT:
-      gamepad->rightTrigger = (event->caxis.value >> 8) + 127;
+      gamepad->rightTrigger = (event->caxis.value >> 8) + 255;
       break;
     default:
       return SDL_NOTHING;
